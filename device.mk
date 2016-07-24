@@ -142,7 +142,6 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
-    init.target.rc \
     ueventd.qcom.rc
 
 # Thermal
