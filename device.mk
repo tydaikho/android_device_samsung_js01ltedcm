@@ -94,10 +94,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     SamsungDoze
 
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
-
 # IPv6 tethering
 PRODUCT_PACKAGES += \
     ebtables \
