@@ -1053,6 +1053,8 @@ on charger
     write /sys/devices/system/cpu/cpu3/online 0
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "powersave"
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 300000
+    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system ro wait noatime
+    class_start sec-charger
 
 service hcidump /system/bin/sh /system/etc/hcidump.sh
     user bluetooth
@@ -1060,11 +1062,10 @@ service hcidump /system/bin/sh /system/etc/hcidump.sh
     disabled
     oneshot
 
-service charger /charger
-    class charger
+service lpm /system/bin/lpm
+    class sec-charger
     critical
     seclabel u:r:healthd:s0
-
 
 service hostapd /system/bin/hostapd -dddd /data/hostapd/hostapd.conf
     class late_start
