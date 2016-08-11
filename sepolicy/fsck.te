@@ -1,3 +1,5 @@
-# Don't allow raw read/write/open access to block_device
-#allow fsck block_device:blk_file { read write ioctl open };
 allow fsck block_device:blk_file { ioctl };
+allow fsck modem_efs_partition_device:blk_file { rw_file_perms };
+
+# Don't allow raw read/write/open access to block_device
+#allow fsck block_device:blk_file { read write open };
