@@ -1,0 +1,9 @@
+allow init debugfs:dir mounton;
+allow init qmuxd:unix_stream_socket connectto;
+allow init qmuxd_socket:sock_file write;
+allow init self:socket { read create ioctl };
+allow init smem_log_device:chr_file { write ioctl };
+allow init thermal_device:chr_file write;
+
+# init should never execute a program without changing to another domain.
+#allow init system_file:file execute_no_trans;
