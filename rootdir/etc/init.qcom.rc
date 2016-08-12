@@ -89,6 +89,12 @@ on boot
     chown bluetooth net_bt_stack /dev/ttyHS0
     chmod 0660 /dev/ttyHS0
 
+    # Update foreground cpuset now that processors are up
+    write /dev/cpuset/foreground/cpus 0-3
+    write /dev/cpuset/foreground/boost/cpus 0-3
+    write /dev/cpuset/background/cpus 0
+    write /dev/cpuset/system-background/cpus 0-1
+
     # MUIC
     chown radio system /sys/class/sec/switch/usb_sel
     chown radio system /sys/class/sec/switch/usb_state
@@ -1190,6 +1196,7 @@ service mpdecision /system/bin/mpdecision --avg_comp
    user root
    group system
    disabled
+   writepid /dev/cpuset/system-background/tasks
 
 service thermal-engine /system/bin/thermal-engine
    class core

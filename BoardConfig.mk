@@ -71,6 +71,9 @@ TARGET_NO_RPC := true
 # Graphics
 TARGET_HAVE_NEW_GRALLOC := true
 
+# CPU
+ENABLE_CPUSETS := true
+
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
