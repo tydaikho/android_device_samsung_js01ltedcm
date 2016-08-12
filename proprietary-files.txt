@@ -360,8 +360,12 @@ lib/libreference-ril.so
 lib/libril.so
 
 # G900F (Android 6.0)
+bin/qseecomd
 etc/firmware/a330_pfp.fw
 etc/firmware/a330_pm4.fw
+lib/drm/libdrmwvmplugin.so
+lib/libdrmdecrypt.so
+lib/liboemcrypto.so
 vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
@@ -370,15 +374,25 @@ vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/libC2D2.so
 vendor/lib/libCB.so
 vendor/lib/libOpenCL.so
+vendor/lib/libQSEEComAPI.so
 vendor/lib/libRSDriver_adreno.so
+vendor/lib/libWVStreamControlAPI_L1.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libbccQTI.so
 vendor/lib/libc2d30-a3xx.so
 vendor/lib/libc2d30-a4xx.so
+vendor/lib/libdrmdiag.so
+vendor/lib/libdrmfs.so
+vendor/lib/libdrmtime.so
 vendor/lib/libgsl.so
 vendor/lib/libllvm-qcom.so
+vendor/lib/librpmb.so
 vendor/lib/librs_adreno.so
 vendor/lib/librs_adreno_sha1.so
 vendor/lib/libsc-a2xx.so
 vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
+vendor/lib/libssd.so
+vendor/lib/libwvdrm_L1.so
+vendor/lib/libwvm.so
+vendor/lib/mediadrm/libwvdrmengine.so
