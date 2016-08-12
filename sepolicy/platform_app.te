@@ -1,0 +1,6 @@
+allow platform_app init:dir { search };
+allow platform_app init:file { read getattr open };
+allow platform_app kernel:dir { search };
+allow platform_app kernel:file { read getattr open };
+allow platform_app ueventd:dir { search };
+allow platform_app ueventd:file { read getattr open };

@@ -8,3 +8,5 @@ allow system_server sensors_efs_file:file { open read };
 allow system_server system_file:file { execmod };
 allow system_server wifi_efs_file:file { read open };
 allow system_server efs_file:file { read write open };
+allow system_server sysfs_sec:dir { search };
+allow system_server sysfs_sec:file { write read getattr open };
