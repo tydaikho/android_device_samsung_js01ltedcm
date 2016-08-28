@@ -17,6 +17,10 @@
 
 LOCAL_PATH := device/samsung/js01ltedcm
 
+ifneq ($(strip $(wildcard $(TOP)/bootable/recovery/twrp.cpp)),)
+BUILD_TWRP := true
+endif
+
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 TARGET_OTA_ASSERT_DEVICE := js01lte,js01ltedcm,SC02F,SC-02F
@@ -108,7 +112,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun0/file
 
 # TWRP
-ifneq ($(strip $(wildcard $(TOP)/bootable/recovery/variables.h)),)
+ifeq ($(BUILD_TWRP),true)
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.twrp
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 RECOVERY_SDCARD_ON_DATA := true
