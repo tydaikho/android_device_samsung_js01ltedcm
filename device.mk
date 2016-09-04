@@ -19,6 +19,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/samsung/js01ltedcm/js01ltedcm-vendor.mk)
 
+# Detect TWRP to use proper fstab
+ifneq ($(strip $(wildcard $(TOP)/bootable/recovery/twrp.cpp)),)
+BUILD_TWRP := true
+endif
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 

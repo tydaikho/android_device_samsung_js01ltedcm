@@ -17,10 +17,6 @@
 
 LOCAL_PATH := device/samsung/js01ltedcm
 
-ifneq ($(strip $(wildcard $(TOP)/bootable/recovery/twrp.cpp)),)
-BUILD_TWRP := true
-endif
-
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 TARGET_OTA_ASSERT_DEVICE := js01lte,js01ltedcm,SC02F,SC-02F
