@@ -6,5 +6,5 @@ $(call inherit-product, device/samsung/js01ltedcm/full_js01ltedcm.mk)
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
-PRODUCT_NAME := cm_js01ltedcm
+PRODUCT_NAME := lineage_js01ltedcm
 PRODUCT_DEVICE := js01ltedcm
