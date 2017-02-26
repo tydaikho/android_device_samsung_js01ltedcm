@@ -5,6 +5,7 @@
 /cache             ext4             /dev/block/platform/msm_sdcc.1/by-name/cache                                   flags=wipeingui
 /data              ext4             /dev/block/platform/msm_sdcc.1/by-name/userdata                                length=-16384
 /persist           ext4             /dev/block/platform/msm_sdcc.1/by-name/persist                                 flags=display=Persist
+/misc              emmc             /dev/block/platform/msm_sdcc.1/by-name/fota                                    flags=display=Misc
 /efs               ext4             /dev/block/platform/msm_sdcc.1/by-name/efs                                     flags=backup=1;display=EFS
 /external_sd       vfat             /dev/block/mmcblk1p1                               /dev/block/mmcblk1          flags=display="Micro SDcard";storage;wipeingui;removable
 /usb-otg           vfat             /dev/block/sda1                                    /dev/block/sda              flags=display="USB OTG";storage;wipeingui;removable
