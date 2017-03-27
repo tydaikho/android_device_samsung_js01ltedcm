@@ -108,7 +108,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_NO_REAL_SDCARD := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun0/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun%d/file"
 
 # TWRP
 ifeq ($(BUILD_TWRP),true)
@@ -116,13 +116,13 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.twrp
 TARGET_RECOVERY_QCOM_RTC_FIX := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_THEME := portrait_hdpi
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+TW_BRIGHTNESS_PATH := "/sys/devices/mdp.0/qcom\x2cmdss_fb_primary.190/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
+TW_EXCLUDE_SUPERSU := true
 TW_DEFAULT_BRIGHTNESS := 100
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
-TW_NO_EXFAT_FUSE := false
-TW_NO_EXFAT := false
+TW_NO_EXFAT_FUSE := true
 TW_INCLUDE_FB2PNG := true
 TW_TARGET_USES_QCOM_BSP := true
 TW_INTERNAL_STORAGE_PATH := "/data/media/0"
@@ -130,8 +130,8 @@ TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_EXTERNAL_STORAGE_PATH := "/external_sd"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
 TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_L_CRYPTO := true
 TWHAVE_SELINUX := true # NOT A TYPO
+TW_MTP_DEVICE := "/dev/mtp_usb"
 endif
 
 # SELinux
