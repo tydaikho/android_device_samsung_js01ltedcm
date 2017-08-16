@@ -142,12 +142,7 @@ static char *camera_fixup_getparams(int __attribute__((unused)) id,
      * this can be turned off, fixup the params to tell the Camera
      * that it really is okay to turn it off.
      */
-    const char *hfrModeValues = params.get(KEY_VIDEO_HFR_VALUES);
-    if (hfrModeValues && !strstr(hfrModeValues, "off")) {
-        char hfrModes[strlen(hfrModeValues) + 4 + 1];
-        sprintf(hfrModes, "%s,off", hfrModeValues);
-        params.set(KEY_VIDEO_HFR_VALUES, hfrModes);
-    }
+    params.set(KEY_VIDEO_HFR_VALUES, "off");
 
     /* Enforce video-snapshot-supported to true */
     if (videoMode) {
