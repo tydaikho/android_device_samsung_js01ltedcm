@@ -24,5 +24,5 @@ Release Date | Fall 2013
 
 ### Based on:
   - [Lawnn's sc02f CM-13.0 device tree](https://github.com/lawnn/android_device_samsung_sc02f/tree/cm-13.0)
-  - [CyanogenMod's HLTE-COMMON CM-13.0 device tree](https://github.com/CyanogenMod/android_device_samsung_hlte-common/tree/cm-13.0)
-  - [CyanogenMod's KS01LTE CM-13.0 device tree](https://github.com/CyanogenMod/android_device_samsung_ks01lte/tree/cm-13.0)
+  - [LineageOS's HLTE-COMMON CM-13.0 device tree](https://github.com/LineageOS/android_device_samsung_hlte-common/tree/cm-13.0)
+  - [LineageOS's KS01LTE CM-13.0 device tree](https://github.com/LineageOS/android_device_samsung_ks01lte/tree/cm-13.0)
