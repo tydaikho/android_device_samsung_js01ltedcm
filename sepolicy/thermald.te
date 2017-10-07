@@ -1,0 +1,9 @@
+# Temperature sensor daemon (root process)
+type thermald, domain;
+type thermald_exec, exec_type, file_type;
+
+# Started by init
+init_daemon_domain(thermald)
+
+# Access to /dev/msm_thermal_query
+allow thermald thermal_engine_device:chr_file rw_file_perms;

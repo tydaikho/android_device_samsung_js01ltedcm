@@ -812,10 +812,10 @@ on post-fs-data
     # Power Hal Permissions
     chown system system /sys/class/input/input2/enabled
     chown system system /sys/class/input/input3/enabled
-    chown system system /sys/class/input/input15/enabled
+    chown system system /sys/class/input/input14/enabled
     chmod 0660 /sys/class/input/input2/enabled
     chmod 0660 /sys/class/input/input3/enabled
-    chmod 0660 /sys/class/input/input15/enabled
+    chmod 0660 /sys/class/input/input14/enabled
 
     # Vibrator
     chmod 0644 /sys/class/timed_output/vibrator/pwm_value
