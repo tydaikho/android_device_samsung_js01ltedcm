@@ -24,7 +24,7 @@
 
 #define TOUCHKEY_POWER "/sys/class/input/input2/enabled"
 #define TSP_POWER "/sys/class/input/input3/enabled"
-#define GPIO_KEYS_POWER "/sys/class/input/input15/enabled"
+#define GPIO_KEYS_POWER "/sys/class/input/input14/enabled"
 
 static pthread_once_t g_init = PTHREAD_ONCE_INIT;
 static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
