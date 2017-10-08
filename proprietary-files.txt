@@ -400,3 +400,6 @@ vendor/lib/librs_adreno_sha1.so
 vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
 vendor/lib/libuiblur.so
+
+# OEMCrypto
+vendor/lib/liboemcrypto.so
